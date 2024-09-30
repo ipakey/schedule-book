@@ -190,7 +190,7 @@ a:hover {
 .arrow {
     border-radius: 8px;
     margin: 0;
-    /* background-color: none; */
+    background-color: #fff;
 }
 
 .close {
@@ -253,6 +253,9 @@ tr {
     border-radius: 12px;
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    font-family: var(--fnt-date);
+    font-size: 0.6rem;
+
 }
 
 /* ? end of Calendar headings */
@@ -265,7 +268,7 @@ tr {
     font-family: var(--fnt-buttons);
     text-transform: lowercase;
     padding: 0.5rem;
-    border: 1px solid var(--clr-medium);
+    border: 2px solid var(--clr-medium);
     font-size: 0.7rem;
     border-radius: 12px;
     background-color: transparent;
@@ -320,7 +323,7 @@ tr {
 /* ? Left pane buttons Calendar Navigation */
 
 
-.calendar .goto-today .goto-btn {
+.calendar .goto-today {
     display: flex;
     background-color: transparent;
     font-size: 0.7rem;
@@ -352,7 +355,7 @@ tr {
 
 .calendar .goto-today .goto {
     display: flex;
-    padding: 5px 10px;
+    padding: 5px 5px;
     font-size: .7rem;
     align-items: center;
     border-radius: 12px;
@@ -360,6 +363,7 @@ tr {
     border: 1px solid var(--clr-medium);
     gap: 10px;
     margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .calendar .goto-today .goto input {
@@ -1000,6 +1004,12 @@ input:valid+span::after {
 
 .event-btn+.tooltip:hover {
     display: block;
+}
+
+.event-btn input {
+    margin: 5px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
