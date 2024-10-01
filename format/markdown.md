@@ -81,11 +81,11 @@ Right:
 
 script structure
 
-variable declaration
-initialise data
-default array = sqli process
-function initCalendar() {}
-initCalendar()
+1. variable declaration
+1. initialise data
+1. default array = sqli process
+1. function initCalendar() {}
+1. initCalendar()
 
 <!-- ! run process  -->
 <!-- ! button functiality-->
@@ -93,30 +93,49 @@ initCalendar()
 function prevMonth(){}
 function nextMonth(){}
 
-add eventListener prev, next, goto, today, dateInput, gotoDate
+1. add eventListener
+
+- prev,
+- next,
+- goto,
+- today,
+- dateInput,
+- gotoDate
 
 <!-- ! button functionality  -->
 
-add eventListeners addEventBtn,
-addEventCloseBtn
-close from outside form
+1. add eventListeners
+
+- addEventBtn,
+- addEventCloseBtn
+- close from outside form
 
 <!-- ! Event Validation  -->
 
-add eventListeners for addEventTo & addEventFrom
-50chars in field
-time format
-remove char not number
-add leading 0
-no more than 5 char total
+1. add eventListeners for addEventTo & addEventFrom
 
-function addListener(){ - define variables - set current day as active day - call active day after click - remove active from previous active day - if prev month clicked go to prev month and add active - select all days of that month - add active to clicked day
-}
+- 50chars in field
+- time format
+- remove char not number
+- add leading 0
+- no more than 5 char total
+
+1. function addListener(){
+
+- define variables
+- set current day as active day
+- call active day after click
+- remove active from previous active day
+- if prev month clicked go to prev month and add active
+- select all days of that month
+- add active to clicked day
+  }
 
 function getActiveDate(date){ - define variable day & dayName
--.innerHtml dayName
--.innerHtml date + month +year
-}
+
+- .innerHtml dayName
+- .innerHtml date + month +year
+  }
 
 <!-- ! Show events of the day -->
 
@@ -150,6 +169,21 @@ show event on document with inserted HTML
 
 }
 
-function (){}
+<!-- ! Add an Event listener-->
+
+addEventSubmit{ - define variables from input form - validate data - all fields full - time format correct - add new event to array
+}
+
+<!-- todo write record to database -->
+
+reset active form fields to blank
+
+update the current day records updateEvents(activeDay)
+
+function convertTime(time){ - split and format time into 12 hr format - return time
+}
+
+<!-- todo date and year picker -->
+
 function (){}
 function (){}
