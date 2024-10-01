@@ -13,7 +13,7 @@ Left
             <div class="dayName"></div>
         </div>
         <div class="days">
-            <!-- todo days will be added with js -->
+            <!-- ! days will be added with js -->
         </div>
         <div class="goto-today">
             <div class="goto event-btn">
@@ -76,3 +76,80 @@ Right:
 </div>
 </div>```
 ````
+
+---
+
+script structure
+
+variable declaration
+initialise data
+default array = sqli process
+function initCalendar() {}
+initCalendar()
+
+<!-- ! run process  -->
+<!-- ! button functiality-->
+
+function prevMonth(){}
+function nextMonth(){}
+
+add eventListener prev, next, goto, today, dateInput, gotoDate
+
+<!-- ! button functionality  -->
+
+add eventListeners addEventBtn,
+addEventCloseBtn
+close from outside form
+
+<!-- ! Event Validation  -->
+
+add eventListeners for addEventTo & addEventFrom
+50chars in field
+time format
+remove char not number
+add leading 0
+no more than 5 char total
+
+function addListener(){ - define variables - set current day as active day - call active day after click - remove active from previous active day - if prev month clicked go to prev month and add active - select all days of that month - add active to clicked day
+}
+
+function getActiveDate(date){ - define variable day & dayName
+-.innerHtml dayName
+-.innerHtml date + month +year
+}
+
+<!-- ! Show events of the day -->
+
+function updateEvents(date){
+define events
+access eventsArr forEach((event) =>{
+get events for active day only
+`if (all parts of date match active day)`
+show event on document with inserted HTML
+
+            ```
+            events += `
+            <div class="event">
+                <div class="title">
+                    <img class="list-icon " src="./images/cogs.png" alt="" srcset="">
+                    <h3 class="event-title">${event.title}
+                    <h3 class="event-time">${event.from} - ${event.to}</h3>
+                </div>
+                <div class="event-details">
+                    <p>${event.details}</p>
+                </div>
+            </div>`
+                ```
+        `if(null)`
+            ```events = ` <div class="no-event">
+                    <p>No Events</p></div>`
+            ```
+
+    eventsContainer.innerHTML = events
+    })
+
+}
+
+function (){}
+function (){}
+function (){}

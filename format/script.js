@@ -8,19 +8,18 @@ const calendar = document.querySelector('.calendar'),
   prev = document.querySelector('.prev'),
   next = document.querySelector('.next'),
   todayBtn = document.querySelector('.today-btn'),
-  gotoBtn = document.querySelector('.goto-btn'),
+  gotoBtn = document.querySelector('.event-btn'),
   dateInput = document.querySelector('.date-input'),
   eventDay = document.querySelector('.event-day'),
   eventDate = document.querySelector('.event-date'),
-  eventsContainer = document.querySelector('.events')
-
-addEventBtn = document.querySelector('.manage-events-btn ')
+  eventsContainer = document.querySelector('.events'),
+  addEventBtn = document.querySelector('.manage-events-btn ')
 addEventCloseBtn = document.querySelector('.close-event-btn')
 addEventWrapper = document.querySelector('.add-event-wrapper')
 
 addEventTitle = document.querySelector('#event-name')
-addEventFrom = document.querySelector('#time-input-from')
-addEventTo = document.querySelector('#time-input-to')
+addEventFrom = document.querySelector('#from-time')
+addEventTo = document.querySelector('#to-time')
 addEventDetails = document.querySelector('#event-details')
 console.log('L28 vars eTitle: ' + addEventTitle.value + ' eFrom: ' + addEventFrom.value + ' eTo: ' + addEventTo.value + ' eDetails' + addEventDetails.value)
 
@@ -65,9 +64,9 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 // ? default events array
 const eventsArr = [
   {
-    day: 16,
-    month: 5,
-    year: 2023,
+    day: 30,
+    month: 9,
+    year: 2024,
     events: [
       {
         title: 'Put cats out',
@@ -84,9 +83,9 @@ const eventsArr = [
     ],
   },
   {
-    day: 5,
-    month: 5,
-    year: 2023,
+    day: 28,
+    month: 9,
+    year: 2024,
     events: [
       {
         title: 'Put cats out',
@@ -390,7 +389,7 @@ function getActiveDay(date) {
   eventDate.innerHTML = date + ' ' + months[month] + ' ' + year
 }
 
-//? function to show events of the day
+// ! function to show events of the day
 
 function updateEvents(date) {
   console.log('F updateEvents L410 input date:  ' + date)
@@ -405,7 +404,7 @@ function updateEvents(date) {
         <div class="event">
           <div class="title">
               <img class="list-icon
-              " src="./icons/cogs.png" alt="" srcset="">
+              " src="./images/cogs.png" alt="" srcset="">
               <h3 class="event-title">${event.title}
               <h3 class="event-time">${event.from} - ${event.to}</h3>
           </div>
